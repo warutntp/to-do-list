@@ -1,0 +1,51 @@
+import React from "react";
+import { render, fireEvent } from "@testing-library/react";
+import { TodoItemModels } from "../../types/TodoItemModels";
+import TodoItem from "../TodoItem";
+import { Provider } from "react-redux";
+import configureStore from "redux-mock-store";
+
+const mockStore = configureStore([]);
+const store = mockStore({});
+
+const todo: TodoItemModels.TodoItemModel = {
+  slug: "1",
+  title: "Test Todo",
+  description: "Test description",
+  completed: false,
+};
+
+describe("TodoItem", () => {
+  it("should render TodoItem correctly", () => {
+    const { getByText, getByRole } = render(
+      <Provider store={store}>
+        <table>
+          <tbody>
+            <TodoItem todo={todo} index={0} />
+          </tbody>
+        </table>
+      </Provider>
+    );
+
+    expect(getByText("Test Todo")).toBeInTheDocument();
+    expect(getByText("Test description")).toBeInTheDocument();
+    expect(getByRole("button", { name: /delete/i })).toBeInTheDocument();
+  });
+
+  it("should open confirmation modal when delete button is clicked", () => {
+    const { getByRole, getByText } = render(
+      <Provider store={store}>
+        <table>
+          <tbody>
+            <TodoItem todo={todo} index={0} />
+          </tbody>
+        </table>
+      </Provider>
+    );
+
+    fireEvent.click(getByRole("button", { name: /delete/i }));
+    expect(
+      getByText(`Are you sure you want to delete "${todo.title}" item?`)
+    ).toBeInTheDocument();
+  });
+});
