@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, screen } from "@testing-library/react";
 import { TodoItemModels } from "../../types/TodoItemModels";
 import TodoItem from "../TodoItem";
 import { Provider } from "react-redux";
@@ -17,7 +17,7 @@ const todo: TodoItemModels.TodoItemModel = {
 
 describe("TodoItem", () => {
   it("should render TodoItem correctly", () => {
-    const { getByText, getByRole } = render(
+    render(
       <Provider store={store}>
         <table>
           <tbody>
@@ -27,13 +27,13 @@ describe("TodoItem", () => {
       </Provider>
     );
 
-    expect(getByText("Test Todo")).toBeInTheDocument();
-    expect(getByText("Test description")).toBeInTheDocument();
-    expect(getByRole("button", { name: /delete/i })).toBeInTheDocument();
+    expect(screen.getByText("Test Todo")).toBeInTheDocument();
+    expect(screen.getByText("Test description")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /delete/i })).toBeInTheDocument();
   });
 
   it("should open confirmation modal when delete button is clicked", () => {
-    const { getByRole, getByText } = render(
+    render(
       <Provider store={store}>
         <table>
           <tbody>
@@ -43,9 +43,9 @@ describe("TodoItem", () => {
       </Provider>
     );
 
-    fireEvent.click(getByRole("button", { name: /delete/i }));
+    fireEvent.click(screen.getByRole("button", { name: /delete/i }));
     expect(
-      getByText(`Are you sure you want to delete "${todo.title}" item?`)
+      screen.getByText(`Are you sure you want to delete "${todo.title}" item?`)
     ).toBeInTheDocument();
   });
 });
