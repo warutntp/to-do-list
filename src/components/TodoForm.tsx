@@ -4,8 +4,8 @@ import { addTodo } from "../store/slices/todosSlice";
 import { useDispatch } from "react-redux";
 
 const TodoForm: React.FC = () => {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
+  const [title, setTitle] = useState<string>("");
+  const [description, setDescription] = useState<string>("");
   const dispatch = useDispatch();
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {

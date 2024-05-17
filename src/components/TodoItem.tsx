@@ -11,7 +11,7 @@ interface TodoItemProps {
 
 const TodoItem: React.FC<TodoItemProps> = ({ todo, index }) => {
   const dispatch = useDispatch();
-  const [showDeletePopup, setShowDeletePopup] = useState(false);
+  const [showDeletePopup, setShowDeletePopup] = useState<boolean>(false);
 
   const handleToggleTodo = (slug: string) => {
     dispatch(toggleTodo(slug));

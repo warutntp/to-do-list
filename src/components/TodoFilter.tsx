@@ -1,12 +1,13 @@
 import React from "react";
+import { FilterTodoType } from "../types/Enums";
 
 interface FilterProps {
   currentFilter: string;
-  setFilter: (filter: string) => void;
+  setFilter: React.Dispatch<React.SetStateAction<FilterTodoType>>;
 }
 
 const TodoFilter: React.FC<FilterProps> = ({ currentFilter, setFilter }) => {
-  const handleFilterChange = (filter: string) => () => {
+  const handleFilterChange = (filter: FilterTodoType) => () => {
     setFilter(filter);
   };
 
@@ -15,27 +16,33 @@ const TodoFilter: React.FC<FilterProps> = ({ currentFilter, setFilter }) => {
       <button
         type="button"
         className={`btn ${
-          currentFilter === "all" ? "btn-primary" : "btn-outline-primary"
+          currentFilter === FilterTodoType.All
+            ? "btn-primary"
+            : "btn-outline-primary"
         }`}
-        onClick={handleFilterChange("all")}
+        onClick={handleFilterChange(FilterTodoType.All)}
       >
         All
       </button>
       <button
         type="button"
         className={`btn ${
-          currentFilter === "incomplete" ? "btn-primary" : "btn-outline-primary"
+          currentFilter === FilterTodoType.Incomplete
+            ? "btn-primary"
+            : "btn-outline-primary"
         }`}
-        onClick={handleFilterChange("incomplete")}
+        onClick={handleFilterChange(FilterTodoType.Incomplete)}
       >
         Incomplete
       </button>
       <button
         type="button"
         className={`btn ${
-          currentFilter === "completed" ? "btn-primary" : "btn-outline-primary"
+          currentFilter === FilterTodoType.Completed
+            ? "btn-primary"
+            : "btn-outline-primary"
         }`}
-        onClick={handleFilterChange("completed")}
+        onClick={handleFilterChange(FilterTodoType.Completed)}
       >
         Completed
       </button>

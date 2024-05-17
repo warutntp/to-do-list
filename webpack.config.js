@@ -1,8 +1,6 @@
 module.exports = {
-  // ... การตั้งค่าอื่น ๆ ของคุณ
   module: {
     rules: [
-      // ... rules อื่น ๆ ของคุณ
       {
         test: /\.mjs$/,
         enforce: "pre",

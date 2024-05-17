@@ -4,17 +4,17 @@ import TodoFilter from "../components/TodoFilter";
 import { useSelector } from "react-redux";
 import { RootState } from "../store/reducers/rootReducer";
 import TodoList from "../components/TodoList";
+import { FilterTodoType } from "../types/Enums";
 
 const TodoListPage: React.FC = () => {
   const todos = useSelector((state: RootState) => state.todos);
-  const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useState<FilterTodoType>(FilterTodoType.All);
 
   const filteredTodos = useMemo(() => {
-    console.log("filterdTodos");
     return todos.filter((todo) => {
-      return filter === "completed"
+      return filter === FilterTodoType.Completed
         ? todo.completed
-        : filter === "incomplete"
+        : filter === FilterTodoType.Incomplete
         ? !todo.completed
         : true;
     });
