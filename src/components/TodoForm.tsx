@@ -30,7 +30,7 @@ const TodoForm: React.FC = () => {
         </label>
         <input
           id="title"
-          className="form-control w-100"
+          className="form-control placeholder-italic"
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
@@ -43,15 +43,15 @@ const TodoForm: React.FC = () => {
           Description (Optional)
         </label>
         <textarea
-          className="form-control"
+          className="form-control placeholder-italic"
           id="description"
           rows={3}
           value={description}
-          placeholder="Todo description"
+          placeholder="Enter todo description"
           onChange={(e) => setDescription(e.target.value)}
         ></textarea>
       </div>
-      <div className="d-flex justify-content-end mb-3">
+      <div className="d-flex justify-content-start mb-3">
         <button type="submit" className="btn btn-primary">
           Add Task
         </button>

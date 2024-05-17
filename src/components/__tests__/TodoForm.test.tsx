@@ -27,7 +27,9 @@ describe("TodoForm", () => {
     expect(
       screen.getByPlaceholderText("Please enter todo title")
     ).toBeInTheDocument();
-    expect(screen.getByPlaceholderText("Todo description")).toBeInTheDocument();
+    expect(
+      screen.getByPlaceholderText("Enter todo description")
+    ).toBeInTheDocument();
     expect(screen.getByText("Add Task")).toBeInTheDocument();
   });
 
@@ -41,7 +43,7 @@ describe("TodoForm", () => {
     fireEvent.change(screen.getByPlaceholderText("Please enter todo title"), {
       target: { value: "New Todo" },
     });
-    fireEvent.change(screen.getByPlaceholderText("Todo description"), {
+    fireEvent.change(screen.getByPlaceholderText("Enter todo description"), {
       target: { value: "Description" },
     });
     fireEvent.click(screen.getByText("Add Task"));
@@ -59,6 +61,8 @@ describe("TodoForm", () => {
     expect(screen.getByPlaceholderText("Please enter todo title")).toHaveValue(
       ""
     );
-    expect(screen.getByPlaceholderText("Todo description")).toHaveValue("");
+    expect(screen.getByPlaceholderText("Enter todo description")).toHaveValue(
+      ""
+    );
   });
 });

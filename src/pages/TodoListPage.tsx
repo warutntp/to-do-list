@@ -22,15 +22,14 @@ const TodoListPage: React.FC = () => {
 
   return (
     <div className="container mt-4">
-      <div className="mb-4">
-        <h3>Add Todo</h3>
-        <hr />
+      <div className="d-flex justify-content-center mb-4">
+        <h3>To-do List App</h3>
       </div>
-      <div className="d-flex justify-content-center mb-8">
+      <h5>Add Todo</h5>
+      <div className="w-75 mb-8">
         <TodoForm />
       </div>
-      <div className="d-flex justify-content-between align-items-center mb-4">
-        <h2>Todo List</h2>
+      <div className="d-flex justify-content-end align-items-center mb-4">
         <TodoFilter currentFilter={filter} setFilter={setFilter} />
       </div>
       <hr />

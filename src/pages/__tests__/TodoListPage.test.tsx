@@ -33,7 +33,6 @@ describe("TodoListPage", () => {
     );
 
     expect(screen.getByText("Add Todo")).toBeInTheDocument();
-    expect(screen.getByText("Todo List")).toBeInTheDocument();
     expect(screen.getByText("Test Todo")).toBeInTheDocument();
   });
 });

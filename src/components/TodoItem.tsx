@@ -57,7 +57,7 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, index }) => {
         <Modal.Header closeButton>
           <Modal.Title>Confirm Delete</Modal.Title>
         </Modal.Header>
-        <Modal.Body>{`Are you sure you want to delete "${todo.title}" item?`}</Modal.Body>
+        <Modal.Body>{`Are you sure you want to delete "${todo.title}" ?`}</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Cancel

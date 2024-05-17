@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { Provider } from "react-redux";
 import configureStore from "redux-mock-store";
 import App from "./App";
@@ -19,13 +19,12 @@ describe("App", () => {
   });
 
   it("should render App correctly", () => {
-    const { getByText } = render(
+    render(
       <Provider store={store}>
         <App />
       </Provider>
     );
 
-    expect(getByText("Add Todo")).toBeInTheDocument();
-    expect(getByText("Todo List")).toBeInTheDocument();
+    expect(screen.getByText("Add Todo")).toBeInTheDocument();
   });
 });

@@ -45,7 +45,7 @@ describe("TodoItem", () => {
 
     fireEvent.click(screen.getByRole("button", { name: /delete/i }));
     expect(
-      screen.getByText(`Are you sure you want to delete "${todo.title}" item?`)
+      screen.getByText(`Are you sure you want to delete "${todo.title}" ?`)
     ).toBeInTheDocument();
   });
 });
