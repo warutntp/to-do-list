@@ -51,8 +51,8 @@ const TodoForm: React.FC = () => {
           onChange={(e) => setDescription(e.target.value)}
         ></textarea>
       </div>
-      <div className="d-flex justify-content-start mb-3">
-        <button type="submit" className="btn btn-primary">
+      <div className="mb-3">
+        <button type="submit" className="btn btn-primary w-100">
           Add Task
         </button>
       </div>

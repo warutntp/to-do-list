@@ -33,7 +33,10 @@ describe("TodoListPage", () => {
     );
 
     expect(screen.getByText("To-do List App")).toBeInTheDocument();
-    expect(screen.getByText("Add Todo")).toBeInTheDocument();
+    expect(screen.getByText("Description (Optional)")).toBeInTheDocument();
+    expect(
+      screen.getByRole("button", { name: /Add Task/i })
+    ).toBeInTheDocument();
     expect(screen.getByText("Test Todo")).toBeInTheDocument();
   });
 });

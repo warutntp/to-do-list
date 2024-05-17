@@ -26,6 +26,5 @@ describe("App", () => {
     );
 
     expect(screen.getByText("To-do List App")).toBeInTheDocument();
-    expect(screen.getByText("Add Todo")).toBeInTheDocument();
   });
 });

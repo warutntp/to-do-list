@@ -25,9 +25,10 @@ const TodoListPage: React.FC = () => {
       <div className="d-flex justify-content-center mb-4">
         <h3>To-do List App</h3>
       </div>
-      <h5>Add Todo</h5>
-      <div className="w-75 mb-8">
-        <TodoForm />
+      <div className="d-flex justify-content-center todo-list-form-container mb-4">
+        <div className="todo-form-container">
+          <TodoForm />
+        </div>
       </div>
       <div className="d-flex justify-content-end align-items-center mb-4">
         <TodoFilter currentFilter={filter} setFilter={setFilter} />
