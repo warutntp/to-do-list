@@ -25,8 +25,8 @@ const TodoListPage: React.FC = () => {
       <div className="d-flex justify-content-center mb-4">
         <h3>To-do List App</h3>
       </div>
-      <div className="d-flex justify-content-center todo-list-form-container mb-4">
-        <div className="todo-form-container">
+      <div className="d-flex justify-content-center bg-primary mb-4 p-5 rounded">
+        <div className="todo-form-container bg-white p-3 rounded col-12 col-md-6">
           <TodoForm />
         </div>
       </div>
