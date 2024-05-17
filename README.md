@@ -26,15 +26,17 @@ npm install
 ```
 
 ## Usage
+
 Start the development server
 
 ```bash
 npm install
 ```
 
-Open your browser and navigate to http://localhost:3000 to see the application running.
+Open your browser and navigate to <http://localhost:3000> to see the application running.
 
 ## Running Tests
+
 This project uses React Testing Library and Jest for unit testing.
 
 Run tests with:
@@ -65,6 +67,7 @@ src/
 │   └── store.ts        # Store configuration
 │
 ├── types/              # TypeScript types
+│   ├── Enums.ts       
 │   └── TodoItemModels.d.ts
 │
 ├── utils/              # Utility functions
