@@ -7,7 +7,7 @@ This is a simple Todo List application built with React, Redux, TypeScript, and 
 - Add new tasks with title and optional description
 - Mark tasks as completed
 - Filter tasks by all, completed, and incomplete
-- Delete tasks with confirmation
+- Delete tasks
 - Persist tasks in local storage
 
 ## Installation
