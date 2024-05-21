@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container mt-4"
+  >
+    <div
+      class="d-flex justify-content-center mb-4"
+    >
+      <h3>
+        To-do List App
+      </h3>
+    </div>
+    <div
+      class="d-flex justify-content-center bg-primary mb-4 p-5 rounded"
+    >
+      <div
+        class="todo-form-container bg-white p-3 rounded col-12 col-md-6"
+      >
+        <form
+          class="mb-3"
+        >
+          <div
+            class="mb-3"
+          >
+            <label
+              class="form-label"
+              for="title"
+            >
+              Title
+            </label>
+            <input
+              class="form-control placeholder-italic"
+              id="title"
+              placeholder="Please enter todo title"
+              required=""
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="mb-3"
+          >
+            <label
+              class="form-label"
+              for="description"
+            >
+              Description (Optional)
+            </label>
+            <textarea
+              class="form-control placeholder-italic"
+              id="description"
+              placeholder="Enter todo description"
+              rows="3"
+            />
+          </div>
+          <div
+            class="mb-3"
+          >
+            <button
+              class="btn btn-primary w-100"
+              type="submit"
+            >
+              Add Task
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div
+      class="d-flex justify-content-end align-items-center mb-4"
+    >
+      <div
+        class="btn-group"
+      >
+        <button
+          class="btn btn-primary"
+          type="button"
+        >
+          All
+        </button>
+        <button
+          class="btn btn-outline-primary"
+          type="button"
+        >
+          Incomplete
+        </button>
+        <button
+          class="btn btn-outline-primary"
+          type="button"
+        >
+          Completed
+        </button>
+      </div>
+    </div>
+    <hr />
+    <div
+      class="table-responsive"
+    >
+      <table
+        class="table table-hover table-striped"
+      >
+        <thead>
+          <tr>
+            <th
+              class="col-1 text-center"
+              scope="col"
+            >
+               # 
+            </th>
+            <th
+              class="col-3 text-wrap-break"
+              scope="col"
+            >
+              Title
+            </th>
+            <th
+              class="col-4 text-wrap-break"
+              scope="col"
+            >
+              Description
+            </th>
+            <th
+              class="col-2 text-center"
+              scope="col"
+            >
+              Completed
+            </th>
+            <th
+              class="col-2 text-center"
+              scope="col"
+            >
+              Action
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              class="text-center"
+              colspan="5"
+            >
+              No todos found
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;

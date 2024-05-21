@@ -25,18 +25,12 @@ describe("TodoListPage", () => {
     store = mockStore(initialState);
   });
 
-  it("should render TodoListPage correctly", () => {
-    render(
+  it("should match snapshot", () => {
+    const { asFragment } = render(
       <Provider store={store}>
         <TodoListPage />
       </Provider>
     );
-
-    expect(screen.getByText("To-do List App")).toBeInTheDocument();
-    expect(screen.getByText("Description (Optional)")).toBeInTheDocument();
-    expect(
-      screen.getByRole("button", { name: /Add Task/i })
-    ).toBeInTheDocument();
-    expect(screen.getByText("Test Todo")).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

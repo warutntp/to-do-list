@@ -4,15 +4,12 @@ import TodoFilter from "../TodoFilter";
 import { FilterTodoType } from "../../types/Enums";
 
 describe("TodoFilter", () => {
-  it("should render TodoFilter correctly", () => {
+  it("should match snapshot", () => {
     const setFilter = jest.fn();
-    render(
+    const { asFragment } = render(
       <TodoFilter currentFilter={FilterTodoType.All} setFilter={setFilter} />
     );
-
-    expect(screen.getByText("All")).toBeInTheDocument();
-    expect(screen.getByText("Incomplete")).toBeInTheDocument();
-    expect(screen.getByText("Completed")).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("should call setFilter with the correct argument when a button is clicked", () => {

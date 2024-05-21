@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoList should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="table-responsive"
+  >
+    <table
+      class="table table-hover table-striped"
+    >
+      <thead>
+        <tr>
+          <th
+            class="col-1 text-center"
+            scope="col"
+          >
+             # 
+          </th>
+          <th
+            class="col-3 text-wrap-break"
+            scope="col"
+          >
+            Title
+          </th>
+          <th
+            class="col-4 text-wrap-break"
+            scope="col"
+          >
+            Description
+          </th>
+          <th
+            class="col-2 text-center"
+            scope="col"
+          >
+            Completed
+          </th>
+          <th
+            class="col-2 text-center"
+            scope="col"
+          >
+            Action
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td
+            class="col-1 text-center"
+          >
+            1
+          </td>
+          <td
+            class="col-3 text-wrap-break"
+          >
+            Test Todo
+          </td>
+          <td
+            class="col-4 text-wrap-break"
+          >
+            Test description
+          </td>
+          <td
+            class="col-2"
+          >
+            <div
+              class="form-check form-switch d-flex justify-content-center"
+            >
+              <input
+                class="form-check-input"
+                id="1"
+                type="checkbox"
+              />
+            </div>
+          </td>
+          <td
+            class="text-center"
+          >
+            <button
+              class="btn py-0"
+              title="Delete"
+              type="button"
+            >
+              <i
+                class="bi bi-trash bi-danger"
+              />
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TodoList should match snapshot no have todo 1`] = `
+<DocumentFragment>
+  <div
+    class="table-responsive"
+  >
+    <table
+      class="table table-hover table-striped"
+    >
+      <thead>
+        <tr>
+          <th
+            class="col-1 text-center"
+            scope="col"
+          >
+             # 
+          </th>
+          <th
+            class="col-3 text-wrap-break"
+            scope="col"
+          >
+            Title
+          </th>
+          <th
+            class="col-4 text-wrap-break"
+            scope="col"
+          >
+            Description
+          </th>
+          <th
+            class="col-2 text-center"
+            scope="col"
+          >
+            Completed
+          </th>
+          <th
+            class="col-2 text-center"
+            scope="col"
+          >
+            Action
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td
+            class="text-center"
+            colspan="5"
+          >
+            No todos found
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</DocumentFragment>
+`;

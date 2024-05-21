@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoForm should match snapshot 1`] = `
+<DocumentFragment>
+  <form
+    class="mb-3"
+  >
+    <div
+      class="mb-3"
+    >
+      <label
+        class="form-label"
+        for="title"
+      >
+        Title
+      </label>
+      <input
+        class="form-control placeholder-italic"
+        id="title"
+        placeholder="Please enter todo title"
+        required=""
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="mb-3"
+    >
+      <label
+        class="form-label"
+        for="description"
+      >
+        Description (Optional)
+      </label>
+      <textarea
+        class="form-control placeholder-italic"
+        id="description"
+        placeholder="Enter todo description"
+        rows="3"
+      />
+    </div>
+    <div
+      class="mb-3"
+    >
+      <button
+        class="btn btn-primary w-100"
+        type="submit"
+      >
+        Add Task
+      </button>
+    </div>
+  </form>
+</DocumentFragment>
+`;

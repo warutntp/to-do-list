@@ -17,20 +17,13 @@ describe("TodoForm", () => {
     store.dispatch = mockDispatch;
   });
 
-  it("should render TodoForm correctly", () => {
-    render(
+  it("should match snapshot", () => {
+    const { asFragment } = render(
       <Provider store={store}>
         <TodoForm />
       </Provider>
     );
-
-    expect(
-      screen.getByPlaceholderText("Please enter todo title")
-    ).toBeInTheDocument();
-    expect(
-      screen.getByPlaceholderText("Enter todo description")
-    ).toBeInTheDocument();
-    expect(screen.getByText("Add Task")).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("should dispatch addTodo action when form is submitted", () => {

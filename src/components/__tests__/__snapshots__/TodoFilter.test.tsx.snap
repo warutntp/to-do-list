@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoFilter should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="btn-group"
+  >
+    <button
+      class="btn btn-primary"
+      type="button"
+    >
+      All
+    </button>
+    <button
+      class="btn btn-outline-primary"
+      type="button"
+    >
+      Incomplete
+    </button>
+    <button
+      class="btn btn-outline-primary"
+      type="button"
+    >
+      Completed
+    </button>
+  </div>
+</DocumentFragment>
+`;

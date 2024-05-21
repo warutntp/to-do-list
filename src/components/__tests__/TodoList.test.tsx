@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { Provider } from "react-redux";
 import configureStore from "redux-mock-store";
 import TodoList from "../TodoList";
@@ -27,24 +27,21 @@ const todos: TodoItemModels.TodoItemModel[] = [
 ];
 
 describe("TodoList", () => {
-  it("should render TodoList correctly with todos", () => {
-    render(
+  it("should match snapshot", () => {
+    const { asFragment } = render(
       <Provider store={store}>
         <TodoList filteredTodos={todos} />
       </Provider>
     );
-
-    expect(screen.getByText("Test Todo")).toBeInTheDocument();
-    expect(screen.getByText("Test description")).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 
-  it("should show 'No todos found' when no todos are available", () => {
-    render(
+  it("should match snapshot no have todo", () => {
+    const { asFragment } = render(
       <Provider store={store}>
         <TodoList filteredTodos={[]} />
       </Provider>
     );
-
-    expect(screen.getByText("No todos found")).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

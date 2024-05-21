@@ -16,8 +16,8 @@ const todo: TodoItemModels.TodoItemModel = {
 };
 
 describe("TodoItem", () => {
-  it("should render TodoItem correctly", () => {
-    render(
+  it("should match snapshot", () => {
+    const { asFragment } = render(
       <Provider store={store}>
         <table>
           <tbody>
@@ -26,10 +26,7 @@ describe("TodoItem", () => {
         </table>
       </Provider>
     );
-
-    expect(screen.getByText("Test Todo")).toBeInTheDocument();
-    expect(screen.getByText("Test description")).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: /delete/i })).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("should open confirmation modal when delete button is clicked", () => {

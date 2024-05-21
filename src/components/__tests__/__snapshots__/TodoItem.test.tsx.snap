@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoItem should match snapshot 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr>
+        <td
+          class="col-1 text-center"
+        >
+          1
+        </td>
+        <td
+          class="col-3 text-wrap-break"
+        >
+          Test Todo
+        </td>
+        <td
+          class="col-4 text-wrap-break"
+        >
+          Test description
+        </td>
+        <td
+          class="col-2"
+        >
+          <div
+            class="form-check form-switch d-flex justify-content-center"
+          >
+            <input
+              class="form-check-input"
+              id="1"
+              type="checkbox"
+            />
+          </div>
+        </td>
+        <td
+          class="text-center"
+        >
+          <button
+            class="btn py-0"
+            title="Delete"
+            type="button"
+          >
+            <i
+              class="bi bi-trash bi-danger"
+            />
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
