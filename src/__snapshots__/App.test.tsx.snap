@@ -16,7 +16,7 @@ exports[`App should match snapshot 1`] = `
       class="d-flex justify-content-center bg-primary mb-4 p-5 rounded"
     >
       <div
-        class="todo-form-container bg-white p-3 rounded col-12 col-md-6"
+        class="todo-form-container bg-white p-3 rounded col-12 col-md-9 col-lg-4"
       >
         <form
           class="mb-3"
